@@ -8,6 +8,7 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // Enable CORS if your React app is hosted on a different origin
+// Hello world
 app.use(cors());
 
 // Middleware to parse JSON bodies in requests
