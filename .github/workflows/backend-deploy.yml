@@ -31,6 +31,6 @@ jobs:
         
         run: |
             cd /
-            cd /obw-checking/backend
+            cd home/runneruser/obw-checking/backend
             ./deploy.sh
             

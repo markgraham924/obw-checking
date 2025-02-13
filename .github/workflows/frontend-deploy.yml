@@ -34,5 +34,5 @@ jobs:
         working-directory: frontend
         run: |
             cd /
-            cd /obw-checking/frontend
+            cd home/runneruser/obw-checking/frontend
             ./deploy.sh
