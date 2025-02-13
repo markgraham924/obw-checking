@@ -1,0 +1,37 @@
+name: Deploy Backend
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'backend/**'
+
+jobs:
+  deploy-backend:
+    runs-on: self-hosted
+    # Optionally specify labels if your runner is tagged, e.g., [self-hosted, backend-runner]
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+
+      - name: Install Backend Dependencies
+        working-directory: backend
+        run: npm install
+
+      - name: Run Backend Tests
+        working-directory: backend
+        run: npm test  # If you have tests for your backend
+
+      - name: Build Backend (if needed)
+        working-directory: backend
+        run: npm run build  # If your backend needs a build step
+
+      - name: Deploy Backend
+        working-directory: backend
+        run: ./deploy.sh
