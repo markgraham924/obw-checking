@@ -1,0 +1,29 @@
+# Global ignores for all Node projects
+node_modules/
+**/node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+.DS_Store
+.env*
+*.env.local
+*.env.development.local
+*.env.test.local
+*.env.production.local
+coverage/
+*.log
+
+# Backend specific ignores (if not already covered above)
+backend/dist/
+backend/build/
+backend/.next/           # if using Next.js for backend rendering (unlikely, but in case)
+backend/temp/
+backend/node_modules/
+
+# Frontend specific ignores
+frontend/build/
+frontend/dist/
+frontend/.next/          # if using Next.js
+frontend/.cache/
+frontend/tmp/

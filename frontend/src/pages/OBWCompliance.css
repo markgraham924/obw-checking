@@ -1,0 +1,279 @@
+/* OBWCompliance.css */
+
+/* Global shaded box style for consistent look */
+.shaded-box {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 0.5rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  }
+  
+  .container {
+    max-width: 600px;
+    margin: 0.5rem auto;
+    padding: 0.5rem;
+  }
+  
+  .title {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Form styling */
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .label {
+    font-size: 0.9rem;
+  }
+  
+  .input {
+    padding: 0.4rem;
+    font-size: 0.9rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .button {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 0.3rem;
+  }
+  
+  .button:hover {
+    background-color: #0056b3;
+  }
+  
+  .info {
+    font-size: 0.8rem;
+    color: #555;
+  }
+  
+  .error {
+    color: red;
+    font-size: 0.8rem;
+  }
+  
+  /* Product Name */
+  .product-name {
+    font-size: 1.6rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Status Boxes */
+  .status-container {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 0.5rem;
+    flex-wrap: wrap;
+  }
+  
+  .status-box {
+    flex: 1 1 45%;
+    margin: 0.3rem;
+    padding: 0.5rem;
+    border-radius: 6px;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+  }
+  
+  .status-green {
+    background-color: #28a745;
+  }
+  
+  .status-red {
+    background-color: #dc3545;
+  }
+  
+  /* 2x2 Grid for Buttons */
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .grid-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0.7rem;
+    background-color: #6c757d;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    text-align: center;
+    height: 150px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+  }
+  
+  .grid-button:hover {
+    background-color: #5a6268;
+  }
+  
+  /* Dynamic color overrides for missing scans button */
+  .status-green.grid-button {
+    background-color: #28a745;
+  }
+  .status-amber.grid-button {
+    background-color: #ffc107;
+  }
+  .status-red.grid-button {
+    background-color: #dc3545;
+  }
+  
+  .button-main-text {
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-bottom: 0.2rem;
+  }
+  
+  .button-subtext {
+    font-size: 0.75rem;
+    color: #f8f9fa;
+  }
+  
+  /* Modal styles */
+  .modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  .modal-content {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 6px;
+    max-width: 90%;
+    max-height: 90%;
+    overflow-y: auto;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+  }
+  
+  .modal-title {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+  }
+  
+  .modal-body {
+    margin-bottom: 0.5rem;
+  }
+  
+  .modal-close-button {
+    display: block;
+    margin: 0 auto;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .modal-close-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Section styling */
+  .section {
+    margin-bottom: 0.8rem;
+  }
+  
+  .section-title {
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+    border-bottom: 1px solid #007BFF;
+    padding-bottom: 0.2rem;
+  }
+  
+  /* List styling */
+  .list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .list-item {
+    background: #f4f4f4;
+    margin-bottom: 0.3rem;
+    padding: 0.4rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+  }
+  
+  .bold {
+    font-weight: bold;
+  }
+  
+  /* Scans Summary styling */
+  .scans-summary-container {
+    margin-top: 0.5rem;
+  }
+  
+  .scan-summary {
+    background: #e9ecef;
+    padding: 0.4rem;
+    margin-bottom: 0.3rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+  }
+  
+  /* Product image */
+  .product-header {
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+  
+  .product-image {
+    width: 150px;
+    height: 100px;
+    object-fit: cover;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin: 0.3rem auto;
+    display: block;
+  }
+  
+  /* Mobile responsiveness */
+  @media (max-width: 600px) {
+    .container {
+      padding: 0.3rem;
+    }
+    .title {
+      font-size: 1.6rem;
+    }
+    .button, .input, .toggle-button, .modal-close-button {
+      font-size: 0.8rem;
+    }
+    .section-title {
+      font-size: 0.9rem;
+    }
+    .list-item {
+      font-size: 0.8rem;
+    }
+  }
+  
