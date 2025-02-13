@@ -10,12 +10,14 @@ on:
 jobs:
   deploy-backend:
     runs-on: self-hosted
-    # Optionally specify labels if your runner is tagged, e.g., [self-hosted, backend-runner]
+    # Optionally, if you tagged your runner with "backend-runner", you could use:
+    # runs-on: [self-hosted, backend-runner]
+
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
 
-      - name: Set up Node.js
+      - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '16'
@@ -26,11 +28,7 @@ jobs:
 
       - name: Run Backend Tests
         working-directory: backend
-        run: npm test  # If you have tests for your backend
-
-      - name: Build Backend (if needed)
-        working-directory: backend
-        run: npm run build  # If your backend needs a build step
+        run: npm test  # Remove this step if you do not have tests
 
       - name: Deploy Backend
         working-directory: backend

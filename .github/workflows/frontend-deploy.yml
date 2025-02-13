@@ -10,12 +10,14 @@ on:
 jobs:
   deploy-frontend:
     runs-on: self-hosted
-    # Optionally specify labels if your runner is tagged, e.g., [self-hosted, frontend-runner]
+    # Optionally, if you tagged your runner with "frontend-runner", use:
+    # runs-on: [self-hosted, frontend-runner]
+
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
 
-      - name: Set up Node.js
+      - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '16'
@@ -26,7 +28,7 @@ jobs:
 
       - name: Run Frontend Tests
         working-directory: frontend
-        run: npm test  # If you have tests for your frontend
+        run: npm test  # Remove if you have no tests
 
       - name: Build Frontend
         working-directory: frontend
