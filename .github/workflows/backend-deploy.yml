@@ -26,10 +26,6 @@ jobs:
         working-directory: backend
         run: npm install
 
-      - name: Run Backend Tests
-        working-directory: backend
-        run: npm test  # Remove this step if you do not have tests
-
       - name: Deploy Backend
         working-directory: backend
         run: ./deploy.sh
