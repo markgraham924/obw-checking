@@ -32,4 +32,7 @@ jobs:
 
       - name: Deploy Frontend
         working-directory: frontend
-        run: ./deploy.sh
+        run: |
+            cd /
+            cd /obw-checking/frontend
+            ./deploy.sh

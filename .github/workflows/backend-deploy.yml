@@ -28,4 +28,9 @@ jobs:
 
       - name: Deploy Backend
         working-directory: backend
-        run: ./deploy.sh
+        
+        run: |
+            cd /
+            cd /obw-checking/backend
+            ./deploy.sh
+            
