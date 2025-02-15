@@ -21,4 +21,5 @@ jobs:
 
       - name: Deploy Frontend
         working-directory: frontend
-        run: ../frontend/deploy.sh
+        run: ./deploy.sh
+    
