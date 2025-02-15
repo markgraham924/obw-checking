@@ -34,7 +34,7 @@ const OBWCompliance = () => {
       console.log("Fetching data for UPC:", upc);
       console.log("API URL:", `/api/obw-compliance?upc=${encodeURIComponent(upc)}`);
       const response = await fetch(
-        `https://test.markgraham.uk/api/obw-compliance?upc=${encodeURIComponent(upc)}`
+        `https://fsst.markgraham.uk/api/obw-compliance?upc=${encodeURIComponent(upc)}`
       );
       if (!response.ok) {
         throw new Error("Error retrieving data");
