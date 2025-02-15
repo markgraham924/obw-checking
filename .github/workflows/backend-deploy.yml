@@ -9,10 +9,7 @@ on:
 
 jobs:
   deploy-backend:
-    runs-on: self-hosted
-    # Optionally, if you tagged your runner with "backend-runner", you could use:
-    # runs-on: [self-hosted, backend-runner]
-
+    runs-on: self-hosted  # Make sure your self-hosted runner is online.
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
@@ -20,17 +17,13 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '16'
+          node-version: '20'   # Use the required Node.js version.
 
-      - name: Install Backend Dependencies
+      # (Optional) Set working directory to backend, if needed.
+      - name: Ensure deploy.sh is executable
         working-directory: backend
-        run: npm install
+        run: chmod +x deploy.sh
 
       - name: Deploy Backend
         working-directory: backend
-        
-        run: |
-            cd /
-            cd home/runneruser/obw-checking/backend
-            ./deploy.sh
-            
+        run: ./deploy.sh
