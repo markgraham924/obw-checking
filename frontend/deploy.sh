@@ -3,7 +3,7 @@
 echo "Deploying Frontend..."
 
 # Navigate to the repository root and pull the latest changes.
-cd /home/runneruser/obw-checking
+# cd /home/runneruser/obw-checking
 git pull
 
 # Switch to the frontend folder.
