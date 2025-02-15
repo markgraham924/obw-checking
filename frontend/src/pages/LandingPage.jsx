@@ -7,7 +7,7 @@ const LandingPage = () => {
       <h1>Welcome to the App</h1>
       <div style={{ marginTop: '2rem' }}>
         <Link to="/obw-compliance" style={linkStyle}>
-          OBW Compliance Page
+          OBW Compliance Page Hi Mark
         </Link>
       </div>
       <div style={{ marginTop: '1rem' }}>
