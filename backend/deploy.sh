@@ -5,9 +5,6 @@ echo "Deploying Backend..."
 # Change to the repository root and pull the latest changes.
 git pull
 
-# Switch to the backend folder.
-cd backend
-
 # Install dependencies.
 npm install
 
