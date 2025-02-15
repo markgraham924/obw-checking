@@ -16,6 +16,6 @@ npm run build
 cp -r dist/* /var/www/frontend/
 
 # Reload nginx to ensure it serves the latest files.
-systemctl reload nginx
+sudo systemctl reload nginx
 
 echo "Frontend deployed successfully."
