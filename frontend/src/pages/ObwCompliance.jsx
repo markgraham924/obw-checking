@@ -31,6 +31,8 @@ const OBWCompliance = () => {
     setLoading(true);
     setError("");
     try {
+      console.log("Fetching data for UPC:", upc);
+      console.log("API URL:", `/api/obw-compliance?upc=${encodeURIComponent(upc)}`);
       const response = await fetch(
         `/api/obw-compliance?upc=${encodeURIComponent(upc)}`
       );
