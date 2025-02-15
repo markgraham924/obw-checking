@@ -18,12 +18,11 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '20'
-          
+
       - name: Ensure deploy.sh is executable
-        run: chmod +x deploy.sh
         working-directory: frontend
-        
+        run: chmod +x deploy.sh
+
       - name: Deploy Frontend
         working-directory: frontend
         run: ./deploy.sh
-    

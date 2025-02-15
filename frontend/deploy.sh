@@ -2,21 +2,27 @@
 
 echo "Deploying Frontend..."
 
-# No need to change to an absolute path if you're working relative to the repo root.
-# If you want to pull changes, you can do that directly.
+# Navigate to the repository root and pull the latest changes.
+cd /home/runneruser/obw-checking
 git pull
 
-# Install dependencies
+# Switch to the frontend folder.
+cd frontend
+
+# Install dependencies.
 npm install
 
-# Build the project using Vite (outputs into the 'dist' folder)
+# Build the project using Vite (builds into the 'dist' folder).
 npm run build
 
-# Copy the build output from the 'dist' folder to your live directory.
-# Make sure /var/www/frontend exists and runneruser has write permissions.
+# Ensure the live directory exists and has correct permissions.
+sudo mkdir -p /var/www/frontend
+sudo chown runneruser:runneruser /var/www/frontend
+
+# Copy the build output from the 'dist' folder to the live directory.
 cp -r dist/* /var/www/frontend/
 
-# Restart or start the static server via PM2 using your start script.
-pm2 restart frontend || pm2 start npm --name frontend -- run start
+# Reload nginx to ensure it serves the latest files.
+sudo systemctl reload nginx
 
 echo "Frontend deployed successfully."
