@@ -10,9 +10,6 @@ on:
 jobs:
   deploy-frontend:
     runs-on: self-hosted
-    # Optionally, if you tagged your runner with "frontend-runner", use:
-    # runs-on: [self-hosted, frontend-runner]
-
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
@@ -20,19 +17,8 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '16'
-
-      - name: Install Frontend Dependencies
-        working-directory: frontend
-        run: npm install
-
-      - name: Build Frontend
-        working-directory: frontend
-        run: npm run build
+          node-version: '20'
 
       - name: Deploy Frontend
         working-directory: frontend
-        run: |
-            cd /
-            cd home/runneruser/obw-checking/frontend
-            ./deploy.sh
+        run: ../frontend/deploy.sh
